@@ -55,15 +55,3 @@ We will build a BookStore application using Spring Boot, Spring Cloud, and Docke
 * Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 * Install [IntelliJ IDEA](https://www.jetbrains.com/idea) or any of your favorite IDE
 * Install [Postman](https://www.postman.com/) or any REST Client
-
-## Other Learning Resources
-* [SivaLabs Blog](https://sivalabs.in)
-  * [Spring Boot Tutorials](https://www.sivalabs.in/spring-boot-tutorials/)
-  * [Kubernetes Tutorials](https://www.sivalabs.in/getting-started-with-kubernetes/)
-  * [Spring Security OAuth 2.0 Tutorials](https://www.sivalabs.in/spring-security-oauth2-tutorial-introduction/)
-  * [A Pragmatic Approach to Software Design](https://www.sivalabs.in/tomato-architecture-pragmatic-approach-to-software-design/)
-* [SivaLabs YouTube Channel](https://www.youtube.com/c/SivaLabs)
-  * [Spring Boot Tips Series](https://www.youtube.com/playlist?list=PLuNxlOYbv61jFFX2ARQKnBgkMF6DvEEic)
-  * [Spring Boot + Kubernetes Series](https://www.youtube.com/playlist?list=PLuNxlOYbv61h66_QlcjCEkVAj6RdeplJJ)
-  * [Spring Boot : The Missing Guide](https://www.youtube.com/playlist?list=PLuNxlOYbv61jZL1IiciTgWezZoqEp4WXh)
-  * [Java Testing Made Easy: Learn writing Unit, Integration, E2E & Performance Tests](https://www.youtube.com/playlist?list=PLuNxlOYbv61jtHHFHBOc9N7Dg5jn013ix)
