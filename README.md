@@ -1,11 +1,7 @@
 # Spring Boot Microservices Course
 This repository contains the source code for the [Spring Boot Microservices Course](https://www.youtube.com/playlist?list=PLuNxlOYbv61g_ytin-wgkecfWDKVCEDmB).
 
-![Spring Boot Microservices course](docs/youtube-thumbnail.png)
-
 We will build a BookStore application using Spring Boot, Spring Cloud, and Docker.
-
-![BookStore Microservices Architecture](docs/bookstore-spring-microservices.png)
 
 ## Modules
 * **catalog-service**: 
