@@ -1,0 +1,23 @@
+{
+  "git": {
+    "commit": {
+      "message": {
+        "full": "Update README.md"
+      },
+      "user": {
+        "name": "adeshmalunjkar"
+      },
+      "id": {
+        "abbrev": "8c9e9ea"
+      }
+    },
+    "branch": "main"
+  },
+  "build": {
+    "artifact": "catalog-service",
+    "name": "catalog-service",
+    "time": "2025-06-03T14:59:34.033Z",
+    "version": "0.0.1-SNAPSHOT",
+    "group": "com.malunjkar"
+  }
+}
