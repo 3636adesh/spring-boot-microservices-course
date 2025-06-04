@@ -1,15 +1,15 @@
-//package com.malunjkar;
+// package com.malunjkar;
 //
-//import static io.restassured.RestAssured.given;
-//import static org.hamcrest.Matchers.hasSize;
-//import static org.hamcrest.Matchers.is;
+// import static io.restassured.RestAssured.given;
+// import static org.hamcrest.Matchers.hasSize;
+// import static org.hamcrest.Matchers.is;
 //
-//import io.restassured.http.ContentType;
-//import org.junit.jupiter.api.Test;
-//import org.springframework.test.context.jdbc.Sql;
+// import io.restassured.http.ContentType;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.test.context.jdbc.Sql;
 //
-//@Sql("/test-data.sql")
-//class ProductControllerTest extends AbstractIT {
+// @Sql("/test-data.sql")
+// class ProductControllerTest extends AbstractIT {
 //
 //    @Test
 //    void shouldReturnAllProduct() {
@@ -21,7 +21,7 @@
 //                .body("data", hasSize(10))
 //                .body("totalElements", is(15));
 //    }
-//}
+// }
 //
 ////    @Test
 ////    void shouldReturnAllProduct() {
