@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Running mvn spotless:apply for microservices..."
+
+SERVICES=("order-service" "catalog-service")
+
+for SERVICE in "${SERVICES[@]}"; do
+  echo "Applying spotless in $SERVICE"
+  (cd "$SERVICE" && mvn spotless:apply)
+done
+
+# Add any files modified by Spotless
+git add .
+
+echo "Spotless applied. Proceeding with commit."
+exit 0
