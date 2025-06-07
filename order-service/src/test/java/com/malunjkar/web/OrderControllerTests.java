@@ -14,10 +14,9 @@ import org.springframework.http.HttpStatus;
 class OrderControllerTests extends AbstractIT {
 
     @Nested
-    class createOrderTests {
-
+    class CreateOrderTests {
         @Test
-        void shouldCreateSuccessFully() {
+        void shouldCreateOrderSuccessfully() {
             var payload =
                     """
                         {
@@ -44,7 +43,6 @@ class OrderControllerTests extends AbstractIT {
                             ]
                         }
                     """;
-
             given().contentType(ContentType.JSON)
                     .body(payload)
                     .when()
@@ -58,6 +56,7 @@ class OrderControllerTests extends AbstractIT {
         void shouldReturnBadRequestWhenMandatoryDataIsMissing() {
             var payload = TestDataFactory.createOrderRequestWithInvalidCustomer();
             given().contentType(ContentType.JSON)
+                    //                    .header("Authorization", "Bearer " + getToken())
                     .body(payload)
                     .when()
                     .post("/api/orders")
