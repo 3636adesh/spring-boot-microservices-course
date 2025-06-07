@@ -9,7 +9,7 @@ import org.testcontainers.utility.TestcontainersConfiguration;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Import(TestcontainersConfiguration.class)
-public class AbstractIT {
+class AbstractIT {
 
     @LocalServerPort
     int port;
