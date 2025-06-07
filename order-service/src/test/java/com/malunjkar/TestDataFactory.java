@@ -1,16 +1,15 @@
 package com.malunjkar;
 
+import static org.instancio.Select.field;
+
 import com.malunjkar.domain.models.Address;
 import com.malunjkar.domain.models.CreateOrderRequest;
 import com.malunjkar.domain.models.Customer;
 import com.malunjkar.domain.models.OrderItem;
-import org.instancio.Instancio;
-
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Set;
-
-import static org.instancio.Select.field;
+import org.instancio.Instancio;
 
 public class TestDataFactory {
 

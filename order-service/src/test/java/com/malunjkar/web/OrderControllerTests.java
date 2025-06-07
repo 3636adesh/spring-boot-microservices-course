@@ -1,5 +1,8 @@
 package com.malunjkar.web;
 
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.notNullValue;
+
 import com.malunjkar.AbstractIT;
 import com.malunjkar.TestDataFactory;
 import io.restassured.http.ContentType;
@@ -7,10 +10,7 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.notNullValue;
-
-//@Sql("/test-orders.sql")
+// @Sql("/test-orders.sql")
 class OrderControllerTests extends AbstractIT {
 
     @Nested
