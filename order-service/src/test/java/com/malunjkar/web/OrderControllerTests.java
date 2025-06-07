@@ -1,5 +1,7 @@
-package com.malunjkar;
+package com.malunjkar.web;
 
+import com.malunjkar.AbstractIT;
+import com.malunjkar.TestDataFactory;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
