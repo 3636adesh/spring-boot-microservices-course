@@ -47,9 +47,9 @@ public class OrderService {
                 .findByUserNameAndOrderNumber(userName, orderNumber)
                 .map(OrderMapper::convertToDTO);
     }
-
-    private boolean canBeDelivered(OrderEntity order) {
-        return DELIVERY_ALLOWED_COUNTRIES.contains(
-                order.getDeliveryAddress().country().toUpperCase());
-    }
+    //
+    //    private boolean canBeDelivered(OrderEntity order) {
+    //        return DELIVERY_ALLOWED_COUNTRIES.contains(
+    //                order.getDeliveryAddress().country().toUpperCase());
+    //    }
 }
