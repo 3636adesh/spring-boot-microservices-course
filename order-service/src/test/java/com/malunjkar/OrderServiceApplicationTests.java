@@ -9,5 +9,7 @@ import org.springframework.context.annotation.Import;
 class OrderServiceApplicationTests {
 
     @Test
-    void contextLoads() {}
+    void contextLoads() {
+        /* TODO document why this method is empty */
+    }
 }
