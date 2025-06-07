@@ -1,4 +1,4 @@
-package com.malunjkar;
+package com.malunjkar.testdata;
 
 import static org.instancio.Select.field;
 
@@ -12,7 +12,6 @@ import java.util.Set;
 import org.instancio.Instancio;
 
 public class TestDataFactory {
-
     static final List<String> VALID_COUNTIES = List.of("India", "Germany");
     static final Set<OrderItem> VALID_ORDER_ITEMS =
             Set.of(new OrderItem("P100", "Product 1", new BigDecimal("25.50"), 1));

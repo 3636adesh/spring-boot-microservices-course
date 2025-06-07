@@ -1,22 +1,24 @@
 package com.malunjkar.web;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.CoreMatchers.notNullValue;
 
 import com.malunjkar.AbstractIT;
-import com.malunjkar.TestDataFactory;
+import com.malunjkar.testdata.TestDataFactory;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
+import org.springframework.test.context.jdbc.Sql;
 
-// @Sql("/test-orders.sql")
+@Sql("/test-orders.sql")
 class OrderControllerTests extends AbstractIT {
 
     @Nested
     class CreateOrderTests {
         @Test
         void shouldCreateOrderSuccessfully() {
+            //            mockGetProductByCode("P100", "Product 1", new BigDecimal("25.50"));
             var payload =
                     """
                         {
@@ -44,6 +46,7 @@ class OrderControllerTests extends AbstractIT {
                         }
                     """;
             given().contentType(ContentType.JSON)
+                    //                    .header("Authorization", "Bearer " + getToken())
                     .body(payload)
                     .when()
                     .post("/api/orders")
@@ -64,4 +67,37 @@ class OrderControllerTests extends AbstractIT {
                     .statusCode(HttpStatus.BAD_REQUEST.value());
         }
     }
+
+    //    @Nested
+    //    class GetOrdersTests {
+    //        @Test
+    //        void shouldGetOrdersSuccessfully() {
+    //            List<OrderSummary> orderSummaries = given().when()
+    //                    .header("Authorization", "Bearer " + getToken())
+    //                    .get("/api/orders")
+    //                    .then()
+    //                    .statusCode(200)
+    //                    .extract()
+    //                    .body()
+    //                    .as(new TypeRef<>() {});
+    //
+    //            assertThat(orderSummaries).hasSize(2);
+    //        }
+    //    }
+    //
+    //    @Nested
+    //    class GetOrderByOrderNumberTests {
+    //        String orderNumber = "order-123";
+    //
+    //        @Test
+    //        void shouldGetOrderSuccessfully() {
+    //            given().when()
+    //                    .header("Authorization", "Bearer " + getToken())
+    //                    .get("/api/orders/{orderNumber}", orderNumber)
+    //                    .then()
+    //                    .statusCode(200)
+    //                    .body("orderNumber", is(orderNumber))
+    //                    .body("items.size()", is(2));
+    //        }
+    //    }
 }

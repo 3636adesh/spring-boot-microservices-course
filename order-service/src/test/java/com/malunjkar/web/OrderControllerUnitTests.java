@@ -1,8 +1,6 @@
 package com.malunjkar.web;
 
-import static com.malunjkar.TestDataFactory.createOrderRequestWithInvalidCustomer;
-import static com.malunjkar.TestDataFactory.createOrderRequestWithInvalidDeliveryAddress;
-import static com.malunjkar.TestDataFactory.createOrderRequestWithNoItems;
+import static com.malunjkar.testdata.TestDataFactory.*;
 import static org.junit.jupiter.api.Named.named;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 import static org.mockito.ArgumentMatchers.any;
