@@ -20,11 +20,12 @@ public class TestDataFactory {
     static final Set<OrderItem> INVALID_ORDER_ITEMS =
             Set.of(new OrderItem("ABCD", "Product 1", new BigDecimal("25.50"), 1));
 
-    public static CreateOrderRequest createOrderRequestWithInvalidCustomer(){
+    public static CreateOrderRequest createOrderRequestWithInvalidCustomer() {
         return Instancio.of(CreateOrderRequest.class)
-                .generate(field(Customer::email), gen -> gen.text().pattern("#a#a#a#a#a#a@mail.com"))
-                .set(field(CreateOrderRequest::items), VALID_ORDER_ITEMS)
+                .generate(field(Customer::email), gen -> gen.text().pattern("#c#c#c#c#d#d@mail.com"))
+                .set(field(Customer::phone), "")
                 .generate(field(Address::country), gen -> gen.oneOf(VALID_COUNTIES))
+                .set(field(CreateOrderRequest::items), VALID_ORDER_ITEMS)
                 .create();
     }
 }

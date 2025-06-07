@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class OrderEventMapper {
 
     public static OrderCreatedEvent buildOrderCreatedEvent(OrderEntity order) {
-        return  new OrderCreatedEvent(
+        return new OrderCreatedEvent(
                 UUID.randomUUID().toString(),
                 order.getOrderNumber(),
                 getOrderItems(order),

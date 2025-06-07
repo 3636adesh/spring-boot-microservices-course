@@ -1,17 +1,15 @@
 package com.malunjkar;
 
-
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
-import org.springframework.test.context.jdbc.Sql;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.notNullValue;
 
-@Sql("/test-orders.sql")
-class OrderControllerTests  extends  AbstractIT{
+//@Sql("/test-orders.sql")
+class OrderControllerTests extends AbstractIT {
 
     @Nested
     class createOrderTests {
@@ -51,11 +49,12 @@ class OrderControllerTests  extends  AbstractIT{
                     .post("/api/orders")
                     .then()
                     .statusCode(HttpStatus.CREATED.value())
-                    .body("orderNumber",notNullValue());
+                    .body("orderNumber", notNullValue());
         }
 
-        void shouldReturnBadRequestWhenMandatoryDataIsMissing(){
-            var payload= TestDataFactory.createOrderRequestWithInvalidCustomer();
+        @Test
+        void shouldReturnBadRequestWhenMandatoryDataIsMissing() {
+            var payload = TestDataFactory.createOrderRequestWithInvalidCustomer();
             given().contentType(ContentType.JSON)
                     .body(payload)
                     .when()
