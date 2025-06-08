@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-class OrderValidator {
+public class OrderValidator {
     private static final Logger log = LoggerFactory.getLogger(OrderValidator.class);
 
     private final ProductServiceClient client;
