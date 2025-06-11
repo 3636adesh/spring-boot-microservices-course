@@ -26,7 +26,7 @@ public class OrderEventEntity {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    public OrderEventEntity() {}
+
 
     public OrderEventEntity(String eventId) {
         this.eventId = eventId;
@@ -63,4 +63,6 @@ public class OrderEventEntity {
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    public OrderEventEntity() {}
 }
