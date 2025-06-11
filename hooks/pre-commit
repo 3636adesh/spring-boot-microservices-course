@@ -2,7 +2,7 @@
 
 echo "Running mvn spotless:apply for microservices..."
 
-SERVICES=("order-service" "catalog-service")
+SERVICES=("order-service" "catalog-service" "notifications-service")
 
 for SERVICE in "${SERVICES[@]}"; do
   echo "Applying spotless in $SERVICE"

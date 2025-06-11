@@ -26,8 +26,6 @@ public class OrderEventEntity {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-
-
     public OrderEventEntity(String eventId) {
         this.eventId = eventId;
     }
